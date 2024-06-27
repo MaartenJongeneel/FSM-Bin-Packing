@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<robot name="conveyor002">
+  <link name="base_link" />
+  <joint name="conveyor002" type="fixed">
+    <parent link="base_link" />
+    <child link="conveyor002" />
+    <origin rpy="0 0.0 0.0" xyz="0 0 0" />
+  </joint>
+  <link name="conveyor002">
+    <visual>
+      <geometry>
+        <mesh filename="file://@MESHES_DESTINATION@/conveyor002/Conveyor002_structure.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="default">
+        <color rgba="0.7 0.7 0.7 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <box size="2 1.12 0.9"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="conveyor002belt" type="fixed">
+    <parent link="conveyor002" />
+    <child link="conveyor002_belt" />
+    <origin rpy="0 0.0 0.0" xyz="0 0 0" />
+  </joint>
+  <link name="conveyor002_belt">
+    <visual>
+      <geometry>
+        <mesh filename="file://@MESHES_DESTINATION@/conveyor002/Conveyor002_belt.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="default2">
+        <color rgba="0.16 0.16 0.16 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <box size="2 1.12 0.9"/>
+      </geometry>
+    </collision>
+  </link>
+
+
+
+</robot>

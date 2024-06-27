@@ -1,0 +1,3 @@
+[submodule "analysis/readH5"]
+	path = analysis/readH5
+	url = https://github.com/MaartenJongeneel/readH5

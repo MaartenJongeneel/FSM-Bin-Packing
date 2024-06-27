@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<robot name="workbench">
+  
+  <planar_surface name="Top_surface" link="toppanels">
+    <origin rpy="1.1920928955078125e-07 0.0 -0.0" xyz="2047.2451171875 2329.12744140625 2843.8857421875" />
+    <points>
+      <point xy="1000.0 0.0" />
+        <point xy="1000.0 0.0" />
+        <point xy="-1000.0001220703125 0.0" />
+        <point xy="-1000.0001220703125 0.0" />
+    </points>
+    <material name="plastic" />
+  </planar_surface>
+
+</robot>

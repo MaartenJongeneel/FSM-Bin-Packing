@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<robot name="tote">
+  <link name="base_link" />
+
+  <link name="tote">
+    <visual>
+      <geometry>
+        <mesh filename="file://@MESHES_DESTINATION@/tote/tote.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="default">
+        <color rgba="0.7 0.7 0.7 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <box size="0.590 0.390 0.265"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="tote" type="fixed">
+    <parent link="base_link" />
+    <child link="tote" />
+    <origin rpy="0 0.0 0.0" xyz="0 0 0" />
+  </joint>
+
+
+</robot>

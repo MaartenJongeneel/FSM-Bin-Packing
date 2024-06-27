@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<robot name="box4">
+  <planar_surface name="Bottom" link="box4_body">
+    <origin rpy="3.14 0.0 0.0" xyz="0.0 0.0 -0.0645" />
+    <points>
+      <point xy="-0.099 -0.0465" />
+      <point xy="-0.099 0.0465" />
+      <point xy="0.099 0.0465" />
+      <point xy="0.099 -0.0465" />
+    </points>
+    <material name="plastic" />
+  </planar_surface>
+  <planar_surface name="Front" link="box4_body">
+    <origin rpy="-1.57 0.0 0.0" xyz="0.0 0.0465 0.0" />
+    <points>
+      <point xy="-0.099 -0.0645" />
+      <point xy="-0.099 0.0645" />
+      <point xy="0.099 0.0645" />
+      <point xy="0.099 -0.0645" />
+	</points>
+    <material name="plastic" />
+  </planar_surface>
+  <planar_surface name="Back" link="box4_body">
+    <origin rpy="1.57 0.0 0.0" xyz="0.0 -0.0465 0.0" />
+    <points>
+      <point xy="-0.099 -0.0645" />
+      <point xy="-0.099 0.0645" />
+      <point xy="0.099 0.0645" />
+      <point xy="0.099 -0.0645" />
+    </points>
+    <material name="plastic" />
+  </planar_surface>
+    <planar_surface name="Top" link="box4_body">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0645" />
+    <points>
+      <point xy="-0.099 -0.0465" />
+      <point xy="-0.099 0.0465" />
+      <point xy="0.099 0.0465" />
+      <point xy="0.099 -0.0465" />
+    </points>
+    <material name="plastic" />
+  </planar_surface>
+  <planar_surface name="Left" link="box4_body">
+    <origin rpy="0.0 -1.57 0.0" xyz="-0.099 0.0 0.0" />
+    <points>
+      <point xy="-0.0645 -0.0465" />
+      <point xy="-0.0645 0.0465" />
+      <point xy="0.0645 0.0465" />
+      <point xy="0.0645 -0.0465" />
+    </points>
+    <material name="plastic" />
+  </planar_surface>
+  <planar_surface name="Right" link="box4_body">
+    <origin rpy="0.0 1.57 0.0" xyz="0.099 0.0 0.0" />
+    <points>
+      <point xy="-0.0645 -0.0465" />
+      <point xy="-0.0645 0.0465" />
+      <point xy="0.0645 0.0465" />
+      <point xy="0.0645 -0.0465" />
+    </points>
+    <material name="plastic" />
+  </planar_surface>
+</robot>

@@ -1,0 +1,1 @@
+env/workbench: [env, "@SHARE_DESTINATION@", workbench]

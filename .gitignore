@@ -1,0 +1,6 @@
+/build
+/.vscode
+/mc_rtc_logs
+/analysis/data
+*.asv
+*.pdf

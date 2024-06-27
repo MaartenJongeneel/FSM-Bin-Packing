@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<robot name="box3">
+  <planar_surface name="Bottom" link="box3_body">
+    <origin rpy="3.14 0.0 0.0" xyz="0.0 0.0 -0.0585" />
+    <points>
+      <point xy="-0.0825 -0.0715" />
+      <point xy="-0.0825 0.0715" />
+      <point xy="0.0825 0.0715" />
+      <point xy="0.0825 -0.0715" />
+    </points>
+    <material name="plastic" />
+  </planar_surface>
+  <planar_surface name="Front" link="box3_body">
+    <origin rpy="-1.57 0.0 0.0" xyz="0.0 0.0715 0.0" />
+    <points>
+      <point xy="-0.0825 -0.0585" />
+      <point xy="-0.0825 0.0585" />
+      <point xy="0.0825 0.0585" />
+      <point xy="0.0825 -0.0585" />
+	</points>
+    <material name="plastic" />
+  </planar_surface>
+  <planar_surface name="Back" link="box3_body">
+    <origin rpy="1.57 0.0 0.0" xyz="0.0 -0.0715 0.0" />
+    <points>
+      <point xy="-0.0825 -0.0585" />
+      <point xy="-0.0825 0.0585" />
+      <point xy="0.0825 0.0585" />
+      <point xy="0.0825 -0.0585" />
+    </points>
+    <material name="plastic" />
+  </planar_surface>
+    <planar_surface name="Top" link="box3_body">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0585" />
+    <points>
+      <point xy="-0.0825 -0.0715" />
+      <point xy="-0.0825 0.0715" />
+      <point xy="0.0825 0.0715" />
+      <point xy="0.0825 -0.0715" />
+    </points>
+    <material name="plastic" />
+  </planar_surface>
+  <planar_surface name="Left" link="box3_body">
+    <origin rpy="0.0 -1.57 0.0" xyz="-0.0825 0.0 0.0" />
+    <points>
+      <point xy="-0.0585 -0.0715" />
+      <point xy="-0.0585 0.0715" />
+      <point xy="0.0585 0.0715" />
+      <point xy="0.0585 -0.0715" />
+    </points>
+    <material name="plastic" />
+  </planar_surface>
+  <planar_surface name="Right" link="box3_body">
+    <origin rpy="0.0 1.57 0.0" xyz="0.0825 0.0 0.0" />
+    <points>
+      <point xy="-0.0585 -0.0715" />
+      <point xy="-0.0585 0.0715" />
+      <point xy="0.0585 0.0715" />
+      <point xy="0.0585 -0.0715" />
+    </points>
+    <material name="plastic" />
+  </planar_surface>
+</robot>

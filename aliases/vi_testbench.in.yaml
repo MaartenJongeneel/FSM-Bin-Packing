@@ -1,0 +1,1 @@
+env/vi_testbench: [env, "@SHARE_DESTINATION@", vi_testbench]

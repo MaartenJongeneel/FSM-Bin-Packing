@@ -1,0 +1,3 @@
+MainRobot: panda_gripper
+Enabled: BasicTossSceneSRGripper
+Timestep: 0.008

@@ -1,0 +1,87 @@
+<?xml version="1.0" ?>
+<robot name="workbench" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <link name="world"/>
+  <joint name="world_joint" type="fixed">
+    <parent link="world"/>
+    <child link="wireframe"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+  </joint>
+  <link name="wireframe">
+    <visual>
+      <geometry>
+        <mesh filename="file://@MESHES_DESTINATION@/workbench/workbench_wireframe.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="default">
+        <color rgba="0.9 0.9 0.9 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="file://@MESHES_DESTINATION@/workbench/workbench_wireframe.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint1" type="fixed">
+    <parent link="wireframe"/>
+    <child link="sidepanels"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  <link name="sidepanels">
+    <visual>
+      <geometry>
+        <mesh filename="file://@MESHES_DESTINATION@/workbench/workbench_sidepanels.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="default1">
+        <color rgba="0.16 0.16 0.16 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="file://@MESHES_DESTINATION@/workbench/workbench_sidepanels.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="toppanels" type="fixed">
+    <parent link="sidepanels"/>
+    <child link="toppanels"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  <link name="toppanels">
+    <visual>
+      <geometry>
+        <mesh filename="file://@MESHES_DESTINATION@/workbench/workbench_toppanels.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="default2">
+        <color rgba="0.77 0.51 0.26 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="file://@MESHES_DESTINATION@/workbench/workbench_toppanels.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="insidepanels" type="fixed">
+    <parent link="toppanels"/>
+    <child link="insidepanels"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  <link name="insidepanels">
+    <visual>
+      <geometry>
+        <mesh filename="file://@MESHES_DESTINATION@/workbench/workbench_insidepanels.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="default3">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="file://@MESHES_DESTINATION@/workbench/workbench_insidepanels.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

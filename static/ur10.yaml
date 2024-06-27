@@ -1,0 +1,73 @@
+path: "<PATH TO CATKIN SRC>/iam_description"
+name: ur10_FTSensor_sr_gripper
+urdf_path: "urdfs/ur10_FTSensor_sr_gripper.urdf" 
+fixed: true
+ref_joint_order: [shoulder_pan_joint, shoulder_lift_joint, elbow_joint, wrist_1_joint, wrist_2_joint, wrist_3_joint]
+devices:
+  - type: IO
+    parent: ee_link
+
+stance:
+  shoulder_pan_joint: [3.14]
+  shoulder_lift_joint: [-1.57]
+  elbow_joint: [-1.57]
+  wrist_1_joint: [-1.57]
+  wrist_2_joint: [1.57]
+  wrist_3_joint: [1.57]
+  
+minimalSelfCollisions:
+    - body1: shoulder_link*
+      body2: forearm_link*
+      iDist: 0.2  # interaction distance: minimal distance below which the constraint becomes active
+      sDist: 0.1  # safety distance: minimal allowed distance
+      damping: 10
+    - body1: shoulder_link*
+      body2: wrist_2_link*
+      iDist: 0.2
+      sDist: 0.1
+      damping: 10
+    - body1: shoulder_link*
+      body2: wrist_3_link*
+      iDist: 0.2
+      sDist: 0.1
+      damping: 10
+    - body1: shoulder_link*
+      body2: gripper_link*
+      iDist: 0.2
+      sDist: 0.1
+      damping: 10
+    - body1: shoulder_link*
+      body2: flange_link*
+      iDist: 0.2
+      sDist: 0.1
+      damping: 10
+    - body1: shoulder_link*
+      body2: suction_cup_link*
+      iDist: 0.2
+      sDist: 0.1
+      damping: 10
+    - body1: upper_arm_link*
+      body2: gripper_link*
+      iDist: 0.2
+      sDist: 0.1
+      damping: 10
+    - body1: upper_arm_link*
+      body2: flange_link*
+      iDist: 0.1
+      sDist: 0.05
+      damping: 10
+    - body1: forearm_link*
+      body2: flange_link*
+      iDist: 0.05
+      sDist: 0.01
+      damping: 10
+    - body1: forearm_link*
+      body2: gripper_link*
+      iDist: 0.1
+      sDist: 0.05
+      damping: 10
+    - body1: forearm_link*
+      body2: suction_cup_link*
+      iDist: 0.2
+      sDist: 0.1
+      damping: 10

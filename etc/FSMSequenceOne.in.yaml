@@ -1,0 +1,506 @@
+---
+# If true, the FSM transitions are managed by an external tool
+Managed: false
+# If true and the FSM is self-managed, transitions should be triggered
+StepByStep: true
+# Change idle behaviour, if true the state is kept until transition,
+# otherwise the FSM holds the last state until transition
+IdleKeepState: false
+# Where to look for state libraries
+StatesLibraries:
+- "@MC_STATES_DEFAULT_RUNTIME_INSTALL_PREFIX@"
+- "@MC_STATES_RUNTIME_INSTALL_PREFIX@"
+# Where to look for state files
+StatesFiles:
+- "@MC_STATES_DEFAULT_RUNTIME_INSTALL_PREFIX@/data"
+- "@MC_STATES_RUNTIME_INSTALL_PREFIX@/data"
+# If true, state factory will be more verbose
+VerboseStateFactory: false
+
+#Decide if you want to run on real setup "real: 1" (using pc time) or in simulation "real: 0" (using sim time)
+real: 0
+
+# Additional robots to load
+robots:
+  workbench:
+    module: env/workbench
+    init_pos:
+      translation: [0,0,0]
+      rotation: [0,0,0]
+  conveyor002:
+    module: env/conveyor002
+    init_pos:
+      translation: [-1.76, -0.16, -0.105]
+      rotation: [0,0,0]
+  tote1:
+    module: env/tote
+    init_pos:
+      translation: [0.505, -0.350, -0.282]
+      rotation: [0,0,0]
+  tote2:
+    module: env/tote
+    init_pos:
+      translation: [0.505, 0.350, -0.282]
+      rotation: [0,0,0]
+  ur10_FTSensor_sr_gripper:
+    init_pos:
+      translation: [0.0,0.0,0.0]
+      rotation: [0,0,3.14159265358979323]
+  box013:
+    module: env/box013
+    constraints:
+    - type: dynamics
+      damper: [0.1, 0.1, 0.1]
+    init_pos:
+       translation: [0.50, 0.5, -0.2]
+       rotation: [0,0,0]
+  box014:
+    module: env/toss_box2
+    constraints:
+    - type: dynamics
+      damper: [0.1, 0.1, 0.1]
+    init_pos:
+       translation: [0.50, 0.5, -0.2]
+       rotation: [0,0,0]
+  box015:
+    module: env/toss_box3
+    constraints:
+    - type: dynamics
+      damper: [0.1, 0.1, 0.1]
+    init_pos:
+       translation: [0.50, 0.5, -0.2]
+       rotation: [0,0,0]
+  box016:
+    module: env/toss_box4
+    constraints:
+    - type: dynamics
+      damper: [0.1, 0.1, 0.1]
+    init_pos:
+       translation: [0.50, 0.5, -0.2]
+       rotation: [0,0,0]
+  box017:
+    module: env/toss_box5
+    constraints:
+    - type: dynamics
+      damper: [0.1, 0.1, 0.1]
+    init_pos:
+       translation: [0.50, 0.5, -0.2]
+       rotation: [0,0,0]
+  box018:
+    module: env/toss_box5
+    constraints:
+    - type: dynamics
+      damper: [0.1, 0.1, 0.1]
+    init_pos:
+       translation: [0.50, 0.5, -0.2]
+       rotation: [0,0,0]
+  box019:
+    module: env/toss_box5
+    constraints:
+    - type: dynamics
+      damper: [0.1, 0.1, 0.1]
+    init_pos:
+       translation: [0.50, 0.5, -0.2]
+       rotation: [0,0,0]
+  box020:
+    module: env/toss_box5
+    constraints:
+    - type: dynamics
+      damper: [0.1, 0.1, 0.1]
+    init_pos:
+       translation: [0.50, 0.5, -0.2]
+       rotation: [0,0,0]
+  box021:
+    module: env/toss_box5
+    constraints:
+    - type: dynamics
+      damper: [0.1, 0.1, 0.1]
+    init_pos:
+       translation: [0.50, 0.5, -0.2]
+       rotation: [0,0,0]
+  box022:
+    module: env/toss_box5
+    constraints:
+    - type: dynamics
+      damper: [0.1, 0.1, 0.1]
+    init_pos:
+       translation: [0.50, 0.5, -0.2]
+       rotation: [0,0,0]
+  box023:
+    module: env/toss_box5
+    constraints:
+    - type: dynamics
+      damper: [0.1, 0.1, 0.1]
+    init_pos:
+       translation: [0.50, 0.5, -0.2]
+       rotation: [0,0,0]
+  box024:
+    module: env/toss_box5
+    constraints:
+    - type: dynamics
+      damper: [0.1, 0.1, 0.1]
+    init_pos:
+       translation: [0.50, 0.5, -0.2]
+       rotation: [0,0,0]
+  box025:
+    module: env/toss_box5
+    constraints:
+    - type: dynamics
+      damper: [0.1, 0.1, 0.1]
+    init_pos:
+       translation: [0.50, 0.5, -0.2]
+       rotation: [0,0,0]
+  box026:
+    module: env/toss_box5
+    constraints:
+    - type: dynamics
+      damper: [0.1, 0.1, 0.1]
+    init_pos:
+       translation: [0.50, 0.5, -0.2]
+       rotation: [0,0,0]
+  box027:
+    module: env/toss_box5
+    constraints:
+    - type: dynamics
+      damper: [0.1, 0.1, 0.1]
+    init_pos:
+       translation: [0.50, 0.5, -0.2]
+       rotation: [0,0,0]
+  box028:
+    module: env/toss_box5
+    constraints:
+    - type: dynamics
+      damper: [0.1, 0.1, 0.1]
+    init_pos:
+       translation: [0.50, 0.5, -0.2]
+       rotation: [0,0,0]
+  box029:
+    module: env/toss_box5
+    constraints:
+    - type: dynamics
+      damper: [0.1, 0.1, 0.1]
+    init_pos:
+       translation: [0.50, 0.5, -0.2]
+       rotation: [0,0,0]
+  box030:
+    module: env/toss_box5
+    constraints:
+    - type: dynamics
+      damper: [0.1, 0.1, 0.1]
+    init_pos:
+       translation: [0.50, 0.5, -0.2]
+       rotation: [0,0,0]
+
+    
+# General constraints, always on
+constraints:
+- type: contact
+- type: dynamics
+  damper: [0.1, 0.01, 0.5]
+- type: compoundJoint
+# Collision constraint
+- type: collision
+  # robot: ur10_FTSensor_sr_gripper
+  robot: ur10_FTSensor_sr_gripper
+  # robot: ur10_with_sr_gripper
+  useMinimal: true
+
+# Link names:
+# Shoulder link: base_link, shoulder_link
+# Upper arm link: upper_arm_link
+# Forearm link: forearm_link
+# Wrist 1: wrist_1_link
+# Wrist 2: wrist_2_link
+# Wrist 3: wrist_3_link
+# Gripper: suction_cup_link gripper_link flange_link
+
+# Testbench:
+# - type: collision
+#  r1Index: 0
+#  r2Index: 3
+#  collisions: # array of collisions to add for this pair of robots
+#    - body1: suction_cup_link*
+#      body2: vi_testbench
+#      iDist: 0.3  # interaction distance: minimal distance below which the constraint becomes active
+#      sDist: 0.05 # safety distance: minimal allowed distance
+#      damping: 10
+# - type: collision
+#  r1Index: 0
+#  r2Index: 3
+#  collisions: # array of collisions to add for this pair of robots
+#    - body1: gripper_link*
+#      body2: vi_testbench
+#      iDist: 0.2  # interaction distance: minimal distance below which the constraint becomes active
+#      sDist: 0.1 # safety distance: minimal allowed distance
+#      damping: 10
+# - type: collision
+#  r1Index: 0
+#  r2Index: 3
+#  collisions: # array of collisions to add for this pair of robots
+#    - body1: flange_link*
+#      body2: vi_testbench
+#      iDist: 0.2  # interaction distance: minimal distance below which the constraint becomes active
+#      sDist: 0.1 # safety distance: minimal allowed distance
+#      damping: 10
+# - type: collision
+#  r1Index: 0
+#  r2Index: 3
+#  collisions: # array of collisions to add for this pair of robotsroslaunch mc_rtc_ticker display.launch
+#    - body1: wrist_2_link*
+#      body2: vi_testbench
+#      iDist: 0.2  # interaction distance: minimal distance below which the constraint becomes active
+#      sDist: 0.1 # safety distance: minimal allowed distance
+#      damping: 10
+# - type: collision
+#  r1Index: 0
+#  r2Index: 3
+#  collisions: # array of collisions to add for this pair of robots
+#    - body1: forearm_link*
+#      body2: vi_testbench
+#      iDist: 0.2  # interaction distance: minimal distance below which the constraint becomes active
+#      sDist: 0.1 # safety distance: minimal allowed distance
+#      damping: 10
+# - type: collision
+#  r1Index: 0
+#  r2Index: 3
+#  collisions: # array of collisions to add for this pair of robots
+#    - body1: upper_arm_link*
+#      body2: vi_testbench
+#      iDist: 0.2  # interaction distance: minimal distance below which the constraint becomes active
+#      sDist: 0.05 # safety distance: minimal allowed distance
+#      damping: 10
+
+# Conveyor belt:
+# - type: collision
+#   r1Index: 0
+#   r2Index: 2
+#   collisions: # array of collisions to add for this pair of robots
+#     - body1: suction_cup_link*
+#       body2: conveyor_box_body
+#       iDist: 0.3  # interaction distance: minimal distance below which the constraint becomes active
+#       sDist: 0.05 # safety distance: minimal allowed distance
+#       damping: 10
+# - type: collision
+#   r1Index: 0
+#   r2Index: 2
+#   collisions: # array of collisions to add for this pair of robots
+#     - body1: gripper_link*
+#       body2: conveyor_box_body
+#       iDist: 0.2  # interaction distance: minimal distance below which the constraint becomes active
+#       sDist: 0.1 # safety distance: minimal allowed distance
+#       damping: 10
+# - type: collision
+#   r1Index: 0
+#   r2Index: 2
+#   collisions: # array of collisions to add for this pair of robots
+#     - body1: wrist_2_link*
+#       body2: conveyor_box_body
+#       iDist: 0.2  # interaction distance: minimal distance below which the constraint becomes active
+#       sDist: 0.1 # safety distance: minimal allowed distance
+#       damping: 10
+# - type: collision
+#   r1Index: 0
+#   r2Index: 2
+#   collisions: # array of collisions to add for this pair of robots
+#     - body1: forearm_link*
+#       body2: conveyor_box_body
+#       iDist: 0.2  # interaction distance: minimal distance below which the constraint becomes active
+#       sDist: 0.1 # safety distance: minimal allowed distance
+#       damping: 10
+# - type: collision
+#   r1Index: 0
+#   r2Index: 2
+#   collisions: # array of collisions to add for this pair of robots
+#     - body1: upper_arm_link*
+#       body2: conveyor_box_body
+#       iDist: 0.2  # interaction distance: minimal distance below which the constraint becomes active
+#       sDist: 0.1 # safety distance: minimal allowed distance
+#       damping: 10
+
+# Initial set of contacts
+contacts: []
+
+ObserverPipelines:
+- name: MainPipeline
+  gui: true
+  log: true
+  observers:
+    - type: Encoder
+      config:
+        position: encoderValues
+        # velocity: encoderFiniteDifferences  #Use this when not connected to robot
+        velocity: encoderVelocities       #Use this when connected to robot
+- name: Box13Observation
+  gui: true
+  log: true
+  observers:
+    - type: BodySensor
+      update: true
+      config:
+        robot: box013
+        method: sensor
+- name: Box14Observation
+  gui: true
+  log: true
+  observers:
+    - type: BodySensor
+      update: true
+      config:
+        robot: box014
+        method: sensor
+- name: Box15Observation
+  gui: true
+  log: true
+  observers:
+    - type: BodySensor
+      update: true
+      config:
+        robot: box015
+        method: sensor
+- name: Box16Observation
+  gui: true
+  log: true
+  observers:
+    - type: BodySensor
+      update: true
+      config:
+        robot: box016
+        method: sensor
+- name: Box17Observation
+  gui: true
+  log: true
+  observers:
+    - type: BodySensor
+      update: true
+      config:
+        robot: box017
+        method: sensor
+- name: Box18Observation
+  gui: true
+  log: true
+  observers:
+    - type: BodySensor
+      update: true
+      config:
+        robot: box018
+        method: sensor
+- name: Box19Observation
+  gui: true
+  log: true
+  observers:
+    - type: BodySensor
+      update: true
+      config:
+        robot: box019
+        method: sensor
+- name: Box20Observation
+  gui: true
+  log: true
+  observers:
+    - type: BodySensor
+      update: true
+      config:
+        robot: box020
+        method: sensor
+- name: Box21Observation
+  gui: true
+  log: true
+  observers:
+    - type: BodySensor
+      update: true
+      config:
+        robot: box021
+        method: sensor
+- name: Box22Observation
+  gui: true
+  log: true
+  observers:
+    - type: BodySensor
+      update: true
+      config:
+        robot: box022
+        method: sensor
+- name: Box23Observation
+  gui: true
+  log: true
+  observers:
+    - type: BodySensor
+      update: true
+      config:
+        robot: box023
+        method: sensor
+- name: Box24Observation
+  gui: true
+  log: true
+  observers:
+    - type: BodySensor
+      update: true
+      config:
+        robot: box024
+        method: sensor
+- name: Box25Observation
+  gui: true
+  log: true
+  observers:
+    - type: BodySensor
+      update: true
+      config:
+        robot: box025
+        method: sensor
+- name: Box26Observation
+  gui: true
+  log: true
+  observers:
+    - type: BodySensor
+      update: true
+      config:
+        robot: box026
+        method: sensor
+- name: Box27Observation
+  gui: true
+  log: true
+  observers:
+    - type: BodySensor
+      update: true
+      config:
+        robot: box027
+        method: sensor
+- name: Box28Observation
+  gui: true
+  log: true
+  observers:
+    - type: BodySensor
+      update: true
+      config:
+        robot: box028
+        method: sensor
+- name: Box29Observation
+  gui: true
+  log: true
+  observers:
+    - type: BodySensor
+      update: true
+      config:
+        robot: box029
+        method: sensor
+- name: Box30Observation
+  gui: true
+  log: true
+  observers:
+    - type: BodySensor
+      update: true
+      config:
+        robot: box030
+        method: sensor
+                
+states:
+  Operation_:
+    base: Operation
+
+# Transitions map
+transitions:
+ - [FSMSequenceOne_Initial, OK, Operation_, Auto]
+
+
+# Initial state
+init: FSMSequenceOne_Initial

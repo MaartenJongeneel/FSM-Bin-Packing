@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<robot name="box3">
+  <link name="box3_body">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.165 0.143 0.117"/>
+      </geometry>
+      <material name="CardBoard">
+        <color rgba="0.2667536437511444 0.17454615235328674 0.06440283358097076 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.165 0.143 0.117"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.316"/>
+      <inertia ixx="0.000899" ixy="0" ixz="0" iyy="0.001077" iyz="0" izz="0.001255" />
+    </inertial>
+  </link>
+</robot>
