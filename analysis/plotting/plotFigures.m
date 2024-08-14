@@ -4,8 +4,10 @@ close all;
 color.sim = [201, 174, 145]/255;
 color.sim_hard = [220,217,208]/255;
 color.exp = [51,92,103]/255;
+% color.err = [94,80,63]/255;
+color.err = [122,70,57]/255;
 
-doSave = true;
+doSave = false;
 
 %Image size
 xsize = 400;
@@ -50,7 +52,7 @@ end
 %     subplot(4,2,7)
     axes(ha(7));
 %     plot(t_vec,err_pos_hard,'.-','color',color.sim_hard); hold on
-    plot(t_vec,err_pos,'.-','color',color.sim,'linewidth',1,'MarkerSize',4); 
+    plot(t_vec,err_pos,'.-','color',color.err,'linewidth',1,'MarkerSize',4); 
     hold on
     grid on
     if length(vlines) > 1
@@ -58,15 +60,15 @@ end
             xline(vlines(1,jj),'k-.');
         end
     end
-    xlabel('time [s]')
-    ylabel('pos\_error [m]')
+    xlabel('Time [s]')
+    ylabel('$e_{pos}$ [m]')
     xlim(xlims)
     yticks([0 0.025 0.05])
 
 %     subplot(4,2,8)
     axes(ha(8)); 
 %     plot(t_vec,rad2deg(err_rot_hard),'.-','color',color.sim_hard); hold on;
-    plot(t_vec,rad2deg(err_rot),'.-','color',color.sim,'linewidth',1,'MarkerSize',4);
+    plot(t_vec,rad2deg(err_rot),'.-','color',color.err,'linewidth',1,'MarkerSize',4);
     hold on
     grid on
     if length(vlines) > 1
@@ -74,8 +76,8 @@ end
             xline(vlines(1,jj),'k-.');
         end
     end
-    xlabel('time [s]')
-    ylabel('rot\_error [deg]')
+    xlabel('Time [s]')
+    ylabel('$e_{rot}$ [deg]')
     xlim(xlims)
 
     if doSave ==1; fig = gcf; fig.PaperPositionMode = 'auto'; fig_pos = fig.PaperPosition; fig.PaperSize = [fig_pos(3) fig_pos(4)];
@@ -95,7 +97,7 @@ if length(vlines) > 1
         xline(vlines(1,jj),'k-.');
     end
 end 
-ylabel('$f_x [N]$')
+ylabel('$f_x$ [N]')
 % xlabel('Time [s]')
 xlim(xlims)
 ylim([-10 12])
@@ -111,7 +113,7 @@ if length(vlines) > 1
         xline(vlines(1,jj),'k-.');
     end
 end
-ylabel('$f_y [N]$')
+ylabel('$f_y$ [N]')
 % xlabel('Time [s]')
 xlim(xlims)
 ylim([-20 20])
@@ -127,7 +129,7 @@ if length(vlines) > 1
         xline(vlines(1,jj),'k-.');
     end
 end
-ylabel('$f_z [N]$')
+ylabel('$f_z$ [N]')
 % xlabel('Time [s]')
 xlim(xlims)
 ylim([-50 50])
@@ -135,13 +137,13 @@ ylim([-50 50])
 axes(ha(7));
 % subplot(4,2,7)
 % plot(t_sim,f_err_hard,'.-','color',color.sim_hard); hold on;
-plot(t,f_err,'.-','color',color.sim,'linewidth',1,'MarkerSize',4);grid on; 
+plot(t,f_err,'.-','color',color.err,'linewidth',1,'MarkerSize',4);grid on; 
 if length(vlines) > 1
     for jj=1:size(vlines,2)
         xline(vlines(1,jj),'k-.');
     end
 end
-ylabel('$e_f [N]$')
+ylabel('$e_f$ [N]')
 xlabel('Time [s]')
 xlim(xlims)
 
@@ -155,7 +157,7 @@ if length(vlines) > 1
         xline(vlines(1,jj),'k-.');
     end
 end
-ylabel('$\tau_x [Nm]$')
+ylabel('$\tau_x$ [Nm]')
 % xlabel('Time [s]')
 xlim(xlims)
 ylim([-5 5])
@@ -171,7 +173,7 @@ if length(vlines) > 1
         xline(vlines(1,jj),'k-.');
     end
 end
-ylabel('$\tau_y [Nm]$')
+ylabel('$\tau_y$ [Nm]')
 % xlabel('Time [s]')
 xlim(xlims)
 ylim([-2.5 4.5])
@@ -186,7 +188,7 @@ if length(vlines) > 1
         xline(vlines(1,jj),'k-.');
     end
 end
-ylabel('$\tau_z [Nm]$')
+ylabel('$\tau_z$ [Nm]')
 % xlabel('Time [s]')
 xlim(xlims)
 ylim([-0.2 2])
@@ -194,13 +196,13 @@ ylim([-0.2 2])
 axes(ha(8));
 % subplot(4,2,8)
 % plot(t_sim,t_err_hard,'.-','color',color.sim_hard); hold on;
-plot(t,t_err,'.-','color',color.sim,'linewidth',1,'MarkerSize',4);grid on; hold on;
+plot(t,t_err,'.-','color',color.err,'linewidth',1,'MarkerSize',4);grid on; hold on;
 if length(vlines) > 1
     for jj=1:size(vlines,2)
         xline(vlines(1,jj),'k-.');
     end
 end
-ylabel('$e_{\tau} [Nm]$')
+ylabel('$e_{\tau}$ [Nm]c')
 xlabel('Time [s]')
 xlim(xlims)
 
